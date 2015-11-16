@@ -1,5 +1,5 @@
 language: node_js
 node_js:
   - "4.1"
-before_script: "cd voting-server; npm install"
-script: "npm run test"
+before_script: "cd voting-server && npm install && cd ../voting-client && npm install"
+script: "cd ../voting-server && npm run test && cd ../voting-client && npm run test"
